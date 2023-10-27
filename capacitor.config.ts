@@ -1,7 +1,7 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
+  appId: 'com.jricar2.tarea6',
   appName: 'Couteau',
   webDir: 'www',
   server: {

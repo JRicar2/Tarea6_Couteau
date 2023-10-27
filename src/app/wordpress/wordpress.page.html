@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>My Nintendo News</ion-title>
+    <ion-avatar slot="end">
+      <img src="https://i0.wp.com/mynintendonews.com/wp-content/uploads/2023/04/34CAvYNz_400x400.jpg" alt="My Nintendo News Logo">
+    </ion-avatar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let news of newsData">
+      <ion-card>
+        <img [src]="news.jetpack_featured_media_url" />
+        <ion-card-header>
+          <ion-card-title>{{ news.title.rendered }}</ion-card-title>
+        </ion-card-header>
+    
+        <ion-card-content>
+          <p [innerHTML]="news.excerpt.rendered"></p>
+        </ion-card-content>
+        <ion-button fill="clear" (click)="openLink(news.link)">Visitar</ion-button>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>
